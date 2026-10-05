@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About — Diego Cortés Hernandez</title>
+    <meta name="description" content="About Diego Cortés Hernandez — IT Student building ideas into real things.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="../css/styles.css">
+    <noscript>
+        <style>
+            .about__portrait {
+                animation: none;
+            }
+        </style>
+    </noscript>
+</head>
+
+<body class="subpage" data-page="about">
+
+    <!-- PAGE TRANSITION -->
+    <div class="page-transition" id="pageTransition">
+        <div class="page-transition__glitch"></div>
+        <div class="page-transition__scanlines"></div>
+        <div class="page-transition__wipe"></div>
+    </div>
+
+    <!-- ============================================================
+         SUBPAGE NAVIGATION
+         ============================================================ -->
+    <nav class="sub-nav" id="subNav" aria-label="Main navigation">
+        <a href="../index.html" class="sub-nav__back" data-nav>
+            <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="#ededed" stroke-width="1.5"
+                stroke-linecap="round" stroke-linejoin="round">
+                <path d="M19 12H5M5 12L12 5M5 12L12 19" />
+            </svg>
+            <span>home</span>
+        </a>
+        <div class="sub-nav__links">
+            <a href="thoughts.html" class="sub-nav__link" data-nav>thoughts</a>
+            <a href="projects.html" class="sub-nav__link" data-nav>projects</a>
+            <a href="contact.html" class="sub-nav__link" data-nav>contact</a>
+        </div>
+        <div class="sub-nav__indicator">01 / about</div>
+    </nav>
+
+    <!-- ============================================================
+         ABOUT SECTION (now full page)
+         ============================================================ -->
+    <main class="about subpage-hero" id="about">
+        <div class="about__bg" data-parallax>
+            <img class="about__img" src="../images/1231.jpeg" alt="">
+            <div class="about__scanlines"></div>
+            <div class="about__scan-sweep"></div>
+            <div class="about__overlay"></div>
+        </div>
+
+
+
+        <div class="about__content">
+            <figure class="about__portrait">
+                <img src="../images/ac89cd05-f07e-4dfc-bd7f-8ab6e1ff7ab3.png"
+                    alt="Diego Cortés Hernandez taking a mirror selfie" width="1254" height="1254" fetchpriority="high">
+                <figcaption>
+                    <span class="about__portrait-label">the person behind the code</span>
+                    <strong>Hi, I'm Diego.</strong>
+                    <span>IT student / learning by building</span>
+                    <span class="about__portrait-motto">Keep yourself alive.</span>
+                </figcaption>
+            </figure>
+            <div class="about__left">
+                <span class="about__eyebrow">/ a little about me</span>
+                <h1 class="about__heading">
+                    <span class="heading-line anim" data-anim="clip-up" data-delay="0">
+                        <span class="heading-line__inner">Building <em>ideas.</em></span>
+                    </span>
+                    <span class="heading-line anim" data-anim="clip-up" data-delay="1">
+                        <span class="heading-line__inner">Making them <em>real.</em></span>
+                    </span>
+                    <svg class="about__star anim" data-anim="star-burst" viewBox="0 0 24 24" width="28" height="28">
+                        <path d="M12 2 L14.2 9.8 L22 12 L14.2 14.2 L12 22 L9.8 14.2 L2 12 L9.8 9.8 Z" fill="#ececec" />
+                    </svg>
+                </h1>
+
+                <p class="about__bio anim" data-anim="blur-in" data-delay="3">
+                    I'm Diego Cortés Hernandez, an IT student who enjoys turning
+                    personal interests into things I can build. This portfolio
+                    is one of them. Here, I share what I'm learning and the projects
+                    I'm working on, from small experiments to bigger challenges.
+                </p>
+
+                <div class="about__cta anim" data-anim="blur-in" data-delay="5">
+                    <a href="projects.html" class="about__btn" data-nav>
+                        <span class="about__btn-border">
+                            <svg viewBox="0 0 280 60" preserveAspectRatio="none">
+                                <rect x="1" y="1" width="278" height="58" rx="4" ry="4" />
+                            </svg>
+                        </span>
+                        <span class="about__btn-label">[ view projects ]</span>
+                        <span class="about__btn-arrow">&rarr;</span>
+                    </a>
+                </div>
+            </div>
+
+            <div class="about__right">
+                <div class="about__stack anim" data-anim="blur-in" data-delay="3">
+                    <h2 class="about__detail-heading">Tools I work with</h2>
+                    <div class="about__stack-items">
+                        <span class="about__stack-item">HTML/CSS</span>
+                        <span class="about__stack-item">JavaScript</span>
+                        <span class="about__stack-item">Java</span>
+                        <span class="about__stack-item">Python</span>
+                        <span class="about__stack-item">C++</span>
+                        <span class="about__stack-item">SQL</span>
+                    </div>
+                </div>
+
+                <div class="about__status anim" data-anim="blur-in" data-delay="4">
+                    <h2 class="about__detail-heading">Current focus</h2>
+                    <div class="about__status-row">
+                        <span class="about__status-key">&gt; status_</span>
+                        <span class="about__status-val">student</span>
+                    </div>
+                    <div class="about__status-row">
+                        <span class="about__status-key">&gt; focus_</span>
+                        <span class="about__status-val">full-stack dev</span>
+                    </div>
+                    <div class="about__status-row">
+                        <span class="about__status-key">&gt; learning_</span>
+                        <span class="about__status-val">always</span>
+                    </div>
+                </div>
+            </div>
+
+            <a class="about__credentials" href="certifications.html" data-nav>
+                <span class="about__credentials-copy">
+                    <span class="about__credentials-label">/ continued learning</span>
+                    <strong>Courses &amp; certifications</strong>
+                    <span>Explore the next chapter of my learning journey.</span>
+                </span>
+                <span class="about__credentials-arrow" aria-hidden="true">&rarr;</span>
+            </a>
+        </div>
+
+        <div class="about__counter anim" data-anim="counter-reveal">
+            <div class="about__counter-line"></div>
+            <span class="about__counter-num">01</span>
+            <span class="about__counter-label">about</span>
+        </div>
+    </main>
+
+    <!-- NEXT PAGE HINT -->
+    <div class="next-page" id="nextPage">
+        <a href="thoughts.html" class="next-page__link" data-nav>
+            <span class="next-page__label">next: thoughts</span>
+            <span class="next-page__arrow">&rarr;</span>
+        </a>
+    </div>
+
+    <script src="../js/nav.js"></script>
+    <script src="../js/about.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SQL Queries Inside an API — Diego Cortés Hernandez</title>
+    <meta name="description"
+        content="A practical tutorial on how to make SQL queries inside an API — from raw queries to parameterized statements and best practices.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="../css/styles.css">
+</head>
+
+<body class="subpage" data-page="thought-detail">
+
+    <!-- PAGE TRANSITION -->
+    <div class="page-transition" id="pageTransition">
+        <div class="page-transition__circle"></div>
+    </div>
+
+    <!-- SUBPAGE NAVIGATION -->
+    <nav class="sub-nav" id="subNav" aria-label="Main navigation">
+        <a href="thoughts.html" class="sub-nav__back" data-nav>
+            <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="#ededed" stroke-width="1.5"
+                stroke-linecap="round" stroke-linejoin="round">
+                <path d="M19 12H5M5 12L12 5M5 12L12 19" />
+            </svg>
+            <span>thoughts</span>
+        </a>
+        <div class="sub-nav__links">
+            <a href="../index.html" class="sub-nav__link" data-nav>home</a>
+            <a href="projects.html" class="sub-nav__link" data-nav>projects</a>
+            <a href="contact.html" class="sub-nav__link" data-nav>contact</a>
+        </div>
+        <div class="sub-nav__indicator">02.2 / sql in apis</div>
+    </nav>
+
+    <!-- ============================================================
+         ARTICLE HERO
+         ============================================================ -->
+    <section class="pj-hero subpage-hero" id="articleHero">
+        <div class="pj-hero__bg" data-parallax>
+            <img class="pj-hero__bg-img" src="../images/SEVEN.jpeg" alt="">
+            <div class="pj-hero__scanlines"></div>
+            <div class="pj-hero__scan-sweep"></div>
+            <div class="pj-hero__overlay"></div>
+        </div>
+
+        <div class="pj-hero__content">
+            <div class="pj-hero__meta">
+                <span class="pj-hero__tag anim" data-anim="typewriter">
+                    &lt; thought / 02 /&gt;
+                </span>
+                <span class="pj-hero__category anim" data-anim="blur-in" data-delay="1">/ tutorial</span>
+                <span class="pj-hero__date anim" data-anim="blur-in" data-delay="2">Sep 15, 2026</span>
+            </div>
+
+            <h1 class="pj-hero__title">
+                <span class="heading-line anim" data-anim="clip-up" data-delay="0">
+                    <span class="heading-line__inner">How to Make</span>
+                </span>
+                <span class="heading-line anim" data-anim="clip-up" data-delay="1">
+                    <span class="heading-line__inner"><em>SQL Queries</em></span>
+                </span>
+                <span class="heading-line anim" data-anim="clip-up" data-delay="2">
+                    <span class="heading-line__inner">Inside an <em>API.</em></span>
+                </span>
+                <svg class="about__star anim" data-anim="star-burst" viewBox="0 0 24 24" width="24" height="24">
+                    <path d="M12 2 L14.2 9.8 L22 12 L14.2 14.2 L12 22 L9.8 14.2 L2 12 L9.8 9.8 Z" fill="#ececec" />
+                </svg>
+            </h1>
+
+            <p class="pj-hero__subtitle anim" data-anim="blur-in" data-delay="3">
+                A practical, step-by-step tutorial on connecting your API to a database
+                and running SQL queries safely — from your first SELECT to parameterized statements.
+            </p>
+        </div>
+
+        <div class="pj-hero__counter anim" data-anim="counter-reveal">
+            <div class="about__counter-line"></div>
+            <span class="about__counter-num">02.2</span>
+            <span class="about__counter-label">tutorial</span>
+        </div>
+    </section>
+
+    <!-- ============================================================
+         ARTICLE BODY
+         ============================================================ -->
+    <article class="th-article">
+
+        <section class="th-article__section">
+            <div class="th-article__block">
+                <span class="pj-section__eyebrow anim" data-anim="blur-in">/ the basics</span>
+                <h2 class="th-article__heading anim" data-anim="blur-in" data-delay="1">
+                    Why SQL inside <em>APIs?</em>
+                </h2>
+                <div class="th-article__body anim" data-anim="blur-in" data-delay="2">
+                    <p>
+                        Every application that deals with data needs a way to talk to a database.
+                        Whether you're building a to-do app or an enterprise system, at some point
+                        your API needs to read, write, update, or delete data. That's where SQL comes in.
+                    </p>
+                    <p>
+                        The concept is simple: your API receives a request from the client, processes it,
+                        runs a SQL query against the database, and returns the result. But doing it
+                        <em>right</em> — safely, efficiently, and cleanly — that's where things get interesting.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <section class="th-article__section th-article__section--alt">
+            <div class="th-article__block">
+                <span class="pj-section__eyebrow anim" data-anim="blur-in">/ step 01</span>
+                <h2 class="th-article__heading anim" data-anim="blur-in" data-delay="1">
+                    Setting up the <em>connection.</em>
+                </h2>
+                <div class="th-article__body anim" data-anim="blur-in" data-delay="2">
+                    <p>
+                        First, you need to establish a connection between your API and your database.
+                        Most languages have libraries or drivers for this. For example, in Node.js
+                        you might use <code>mysql2</code> or <code>pg</code> for PostgreSQL:
+                    </p>
+
+                    <div class="th-article__code">
+                        <div class="th-article__code-header">
+                            <span class="th-article__code-lang">javascript</span>
+                            <span class="th-article__code-file">db.js</span>
+                        </div>
+<pre><code>const mysql = require('mysql2/promise');
+
+const pool = mysql.createPool({
+    host: 'localhost',
+    user: 'root',
+    password: 'your_password',
+    database: 'bakery_db',
+    waitForConnections: true,
+    connectionLimit: 10
+});
+
+module.exports = pool;</code></pre>
+                    </div>
+
+                    <p>
+                        Using a connection pool instead of a single connection is crucial.
+                        It lets your API handle multiple requests simultaneously without
+                        opening and closing connections for each one.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <section class="th-article__section">
+            <div class="th-article__block">
+                <span class="pj-section__eyebrow anim" data-anim="blur-in">/ step 02</span>
+                <h2 class="th-article__heading anim" data-anim="blur-in" data-delay="1">
+                    Writing your first <em>query.</em>
+                </h2>
+                <div class="th-article__body anim" data-anim="blur-in" data-delay="2">
+                    <p>
+                        Once your connection is set up, you can start running queries
+                        from your API routes. Here's a basic example of a GET endpoint
+                        that fetches all products from a bakery database:
+                    </p>
+
+                    <div class="th-article__code">
+                        <div class="th-article__code-header">
+                            <span class="th-article__code-lang">javascript</span>
+                            <span class="th-article__code-file">routes/products.js</span>
+                        </div>
+<pre><code>const express = require('express');
+const router = express.Router();
+const pool = require('../db');
+
+// GET all products
+router.get('/products', async (req, res) => {
+    try {
+        const [rows] = await pool.query(
+            'SELECT * FROM products ORDER BY created_at DESC'
+        );
+        res.json({ success: true, data: rows });
+    } catch (error) {
+        console.error('Database error:', error);
+        res.status(500).json({
+            success: false,
+            message: 'Failed to fetch products'
+        });
+    }
+});
+
+module.exports = router;</code></pre>
+                    </div>
+
+                    <p>
+                        Notice how we wrap everything in a <code>try/catch</code> block.
+                        Database queries can fail for many reasons — connection timeouts,
+                        syntax errors, missing tables — and you always want to handle those
+                        gracefully instead of crashing your entire server.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <section class="th-article__section th-article__section--alt">
+            <div class="th-article__block">
+                <span class="pj-section__eyebrow anim" data-anim="blur-in">/ step 03</span>
+                <h2 class="th-article__heading anim" data-anim="blur-in" data-delay="1">
+                    Parameterized queries — <em>stay safe.</em>
+                </h2>
+                <div class="th-article__body anim" data-anim="blur-in" data-delay="2">
+                    <p>
+                        This is the most important part of this tutorial.
+                        <strong>Never, ever concatenate user input directly into your SQL queries.</strong>
+                        This opens the door to SQL injection attacks — one of the most common
+                        and dangerous vulnerabilities in web applications.
+                    </p>
+
+                    <div class="th-article__callout anim" data-anim="blur-in" data-delay="3">
+                        <div class="th-article__callout-line"></div>
+                        <blockquote>
+                            "SQL injection is not a theoretical risk — it's the #1 attack vector
+                            on the OWASP Top 10. Always use parameterized queries."
+                        </blockquote>
+                    </div>
+
+                    <div class="th-article__code">
+                        <div class="th-article__code-header">
+                            <span class="th-article__code-lang">javascript</span>
+                            <span class="th-article__code-file">safe vs unsafe</span>
+                        </div>
+<pre><code>// ❌ DANGEROUS — never do this
+const query = `SELECT * FROM products WHERE id = ${req.params.id}`;
+
+// ✅ SAFE — use parameterized queries
+const [rows] = await pool.query(
+    'SELECT * FROM products WHERE id = ?',
+    [req.params.id]
+);
+
+// For INSERT operations
+const [result] = await pool.query(
+    'INSERT INTO products (name, price, category) VALUES (?, ?, ?)',
+    [name, price, category]
+);</code></pre>
+                    </div>
+
+                    <p>
+                        The <code>?</code> placeholders are automatically escaped by the database
+                        driver, preventing any malicious input from being executed as SQL code.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <section class="th-article__section">
+            <div class="th-article__block">
+                <span class="pj-section__eyebrow anim" data-anim="blur-in">/ step 04</span>
+                <h2 class="th-article__heading anim" data-anim="blur-in" data-delay="1">
+                    Structuring your <em>queries.</em>
+                </h2>
+                <div class="th-article__body anim" data-anim="blur-in" data-delay="2">
+                    <p>
+                        As your application grows, you'll want to organize your SQL queries properly.
+                        A common pattern is to separate your database logic into its own layer:
+                    </p>
+
+                    <div class="th-article__code">
+                        <div class="th-article__code-header">
+                            <span class="th-article__code-lang">javascript</span>
+                            <span class="th-article__code-file">models/Product.js</span>
+                        </div>
+<pre><code>const pool = require('../db');
+
+class Product {
+    static async getAll() {
+        const [rows] = await pool.query(
+            'SELECT * FROM products ORDER BY created_at DESC'
+        );
+        return rows;
+    }
+
+    static async getById(id) {
+        const [rows] = await pool.query(
+            'SELECT * FROM products WHERE id = ?', [id]
+        );
+        return rows[0] || null;
+    }
+
+    static async create({ name, price, category }) {
+        const [result] = await pool.query(
+            'INSERT INTO products (name, price, category) VALUES (?, ?, ?)',
+            [name, price, category]
+        );
+        return { id: result.insertId, name, price, category };
+    }
+
+    static async delete(id) {
+        const [result] = await pool.query(
+            'DELETE FROM products WHERE id = ?', [id]
+        );
+        return result.affectedRows > 0;
+    }
+}
+
+module.exports = Product;</code></pre>
+                    </div>
+
+                    <p>
+                        This pattern keeps your routes clean and your database logic reusable.
+                        Your route handler becomes a simple call:
+                        <code>const products = await Product.getAll();</code>
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <section class="th-article__section th-article__section--alt">
+            <div class="th-article__block">
+                <span class="pj-section__eyebrow anim" data-anim="blur-in">/ final notes</span>
+                <h2 class="th-article__heading anim" data-anim="blur-in" data-delay="1">
+                    Key <em>takeaways.</em>
+                </h2>
+                <div class="th-article__body anim" data-anim="blur-in" data-delay="2">
+                    <ul class="th-article__list">
+                        <li>Always use a <strong>connection pool</strong> instead of single connections.</li>
+                        <li><strong>Parameterize everything.</strong> Never concatenate user input into queries.</li>
+                        <li>Wrap queries in <strong>try/catch blocks</strong> and return meaningful error messages.</li>
+                        <li>Separate your database logic into a <strong>model layer</strong> for cleaner code.</li>
+                        <li>Use <strong>environment variables</strong> for database credentials — never hardcode them.</li>
+                    </ul>
+                    <p>
+                        SQL inside an API isn't complicated once you understand the pattern.
+                        The hard part is building the discipline to do it safely and consistently.
+                        Start simple, stay secure, and build from there.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+    </article>
+
+    <!-- NEXT PAGE HINT -->
+    <div class="next-page" id="nextPage">
+        <a href="thoughts.html" class="next-page__link" data-nav>
+            <span class="next-page__arrow" aria-hidden="true">&larr;</span>
+            <span class="next-page__label">back to thoughts</span>
+        </a>
+    </div>
+
+    <script src="../js/nav.js"></script>
+    <script src="../js/project-detail.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact — Diego Cortés Hernandez</title>
+    <meta name="description" content="Get in touch with Diego Cortés Hernandez.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="../css/styles.css">
+</head>
+
+<body class="subpage" data-page="contact">
+
+    <!-- PAGE TRANSITION -->
+    <div class="page-transition" id="pageTransition">
+        <div class="page-transition__circle"></div>
+    </div>
+
+    <!-- SUBPAGE NAVIGATION -->
+    <nav class="sub-nav" id="subNav" aria-label="Main navigation">
+        <a href="../index.html" class="sub-nav__back" data-nav>
+            <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="#ededed" stroke-width="1.5"
+                stroke-linecap="round" stroke-linejoin="round">
+                <path d="M19 12H5M5 12L12 5M5 12L12 19" />
+            </svg>
+            <span>home</span>
+        </a>
+        <div class="sub-nav__links">
+            <a href="about.html" class="sub-nav__link" data-nav>about</a>
+            <a href="thoughts.html" class="sub-nav__link" data-nav>thoughts</a>
+            <a href="projects.html" class="sub-nav__link" data-nav>projects</a>
+        </div>
+        <div class="sub-nav__indicator">04 / contact</div>
+    </nav>
+
+    <!-- ============================================================
+         CONTACT SECTION
+         ============================================================ -->
+    <section class="contact subpage-hero" id="contact">
+        <div class="contact__bg">
+            <div class="contact__grid-pattern"></div>
+            <div class="contact__scanlines"></div>
+            <div class="contact__scan-sweep"></div>
+            <div class="contact__vignette"></div>
+        </div>
+
+        <div class="contact__content">
+            <div class="contact__left">
+                <div class="contact__tag anim" data-anim="typewriter">
+                    &lt; contact /&gt;
+                </div>
+
+                <h1 class="contact__heading">
+                    <span class="heading-line anim" data-anim="clip-up" data-delay="0">
+                        <span class="heading-line__inner">Let's build</span>
+                    </span>
+                    <span class="heading-line anim" data-anim="clip-up" data-delay="1">
+                        <span class="heading-line__inner"><em>something</em></span>
+                    </span>
+                    <span class="heading-line anim" data-anim="clip-up" data-delay="2">
+                        <span class="heading-line__inner"><em>together.</em></span>
+                    </span>
+                    <svg class="about__star anim" data-anim="star-burst" viewBox="0 0 24 24" width="24" height="24">
+                        <path d="M12 2 L14.2 9.8 L22 12 L14.2 14.2 L12 22 L9.8 14.2 L2 12 L9.8 9.8 Z" fill="#ececec" />
+                    </svg>
+                </h1>
+
+                <p class="contact__desc anim" data-anim="blur-in" data-delay="3">
+                    Got a project in mind? Want to<br>
+                    collaborate? Or just say hi?<br>
+                    I'm always open to new ideas.
+                </p>
+            </div>
+
+            <div class="contact__right">
+                <form class="contact__form" id="contactForm">
+                    <div class="contact__field anim" data-anim="blur-in" data-delay="1">
+                        <label class="contact__label" for="contactName">&gt; name_</label>
+                        <input class="contact__input" type="text" id="contactName" name="name"
+                            placeholder="your name here" autocomplete="name" required>
+                        <div class="contact__input-line"></div>
+                    </div>
+
+                    <div class="contact__field anim" data-anim="blur-in" data-delay="2">
+                        <label class="contact__label" for="contactEmail">&gt; email_</label>
+                        <input class="contact__input" type="email" id="contactEmail" name="email"
+                            placeholder="your@email.com" autocomplete="email" required>
+                        <div class="contact__input-line"></div>
+                    </div>
+
+                    <div class="contact__field anim" data-anim="blur-in" data-delay="3">
+                        <label class="contact__label" for="contactMessage">&gt; message_</label>
+                        <textarea class="contact__textarea" id="contactMessage" name="message"
+                            placeholder="tell me about your idea..." rows="5" required></textarea>
+                        <div class="contact__input-line"></div>
+                    </div>
+
+                    <div class="contact__submit-wrap anim" data-anim="blur-in" data-delay="4">
+                        <button type="submit" class="contact__submit" id="contactSubmit">
+                            <span class="contact__submit-border">
+                                <svg viewBox="0 0 280 60" preserveAspectRatio="none">
+                                    <rect x="1" y="1" width="278" height="58" rx="4" ry="4" />
+                                </svg>
+                            </span>
+                            <span class="contact__submit-label">[ send message ]</span>
+                            <span class="contact__submit-arrow">&rarr;</span>
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <!-- Social links -->
+        <div class="contact__socials anim" data-anim="blur-in" data-delay="5">
+            <a href="#" class="contact__social-link">github</a>
+            <span class="contact__social-sep">/</span>
+            <a href="#" class="contact__social-link">linkedin</a>
+            <span class="contact__social-sep">/</span>
+            <a href="#" class="contact__social-link">twitter</a>
+        </div>
+
+        <div class="contact__counter anim" data-anim="counter-reveal">
+            <div class="about__counter-line"></div>
+            <span class="about__counter-num">04</span>
+            <span class="about__counter-label">contact</span>
+        </div>
+    </section>
+
+    <script src="../js/nav.js"></script>
+
+</body>
+
+</html>

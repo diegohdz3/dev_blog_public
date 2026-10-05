@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thoughts — Diego Cortés Hernandez</title>
+    <meta name="description" content="Ideas, thoughts and learnings by Diego Cortés Hernandez.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="../css/styles.css">
+</head>
+
+<body class="subpage" data-page="thoughts">
+
+    <!-- PAGE TRANSITION -->
+    <div class="page-transition" id="pageTransition">
+        <div class="page-transition__circle"></div>
+    </div>
+
+    <!-- SUBPAGE NAVIGATION -->
+    <nav class="sub-nav" id="subNav" aria-label="Main navigation">
+        <a href="../index.html" class="sub-nav__back" data-nav>
+            <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="#ededed" stroke-width="1.5"
+                stroke-linecap="round" stroke-linejoin="round">
+                <path d="M19 12H5M5 12L12 5M5 12L12 19" />
+            </svg>
+            <span>home</span>
+        </a>
+        <div class="sub-nav__links">
+            <a href="about.html" class="sub-nav__link" data-nav>about</a>
+            <a href="projects.html" class="sub-nav__link" data-nav>projects</a>
+            <a href="contact.html" class="sub-nav__link" data-nav>contact</a>
+        </div>
+        <div class="sub-nav__indicator">02 / thoughts</div>
+    </nav>
+
+    <!-- ============================================================
+         THOUGHTS SECTION
+         ============================================================ -->
+    <section class="thoughts subpage-hero" id="thoughts">
+        <div class="thoughts__bg">
+            <img class="thoughts__bg-img" src="../images/SEVEN.jpeg" alt="">
+            <div class="thoughts__bg-overlay"></div>
+            <div class="thoughts__grid-pattern"></div>
+            <div class="thoughts__scanlines"></div>
+            <div class="thoughts__scan-sweep"></div>
+        </div>
+
+        <div class="thoughts__layout">
+            <div class="thoughts__left">
+                <div class="thoughts__tag anim" data-anim="typewriter">
+                    &lt; thoughts /&gt;
+                </div>
+
+                <h1 class="thoughts__heading">
+                    <span class="heading-line anim" data-anim="clip-up" data-delay="0">
+                        <span class="heading-line__inner">Ideas, reflections</span>
+                    </span>
+                    <span class="heading-line anim" data-anim="clip-up" data-delay="1">
+                        <span class="heading-line__inner"><em>and random</em></span>
+                    </span>
+                    <span class="heading-line anim" data-anim="clip-up" data-delay="2">
+                        <span class="heading-line__inner"><em>thoughts.</em></span>
+                    </span>
+                    <svg class="about__star anim" data-anim="star-burst" viewBox="0 0 24 24" width="24" height="24">
+                        <path d="M12 2 L14.2 9.8 L22 12 L14.2 14.2 L12 22 L9.8 14.2 L2 12 L9.8 9.8 Z" fill="#ececec" />
+                    </svg>
+                </h1>
+
+                <p class="thoughts__desc anim" data-anim="blur-in" data-delay="2">
+                    Things I think about when I'm not coding.
+                    On discipline, progress, and the little
+                    wins that actually matter.
+                </p>
+
+                <div class="thoughts__meta anim" data-anim="slide-left" data-delay="1">
+                    <span>/ tutorials</span>
+                    <span>/ opinions</span>
+                    <span>/ personal</span>
+                </div>
+
+                <div class="thoughts__pinned anim" data-anim="blur-in" data-delay="3">
+                    <div class="thoughts__pinned-label">&gt; pinned_thought</div>
+                    <blockquote class="thoughts__pinned-quote">
+                        "The code compiles, but the real question is — did you learn something today?"
+                    </blockquote>
+                </div>
+
+                <div class="thoughts__tagline anim" data-anim="blur-in" data-delay="4">
+                    learn / think / share
+                </div>
+            </div>
+
+            <div class="thoughts__right">
+                <!-- ======= CATEGORY TABS ======= -->
+                <div class="thoughts__tabs anim" data-anim="blur-in" data-delay="1">
+                    <button class="thoughts__tab is-active" data-tab="tutorials" id="tabTutorials">
+                        <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M2 3h6a4 4 0 014 4v14a3 3 0 00-3-3H2z"/><path d="M22 3h-6a4 4 0 00-4 4v14a3 3 0 013-3h7z"/>
+                        </svg>
+                        <span>tutoriales</span>
+                        <span class="thoughts__tab-count">01</span>
+                    </button>
+                    <button class="thoughts__tab" data-tab="opinions" id="tabOpinions">
+                        <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/>
+                        </svg>
+                        <span>opiniones / ideas</span>
+                        <span class="thoughts__tab-count">01</span>
+                    </button>
+                    <button class="thoughts__tab" data-tab="personal" id="tabPersonal">
+                        <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"/>
+                        </svg>
+                        <span>personal / profesional</span>
+                        <span class="thoughts__tab-count">01</span>
+                    </button>
+                </div>
+
+                <!-- ======= TAB PANELS ======= -->
+                <div class="thoughts__panels">
+
+                    <!-- PANEL: Tutoriales -->
+                    <div class="thoughts__panel is-active" data-panel="tutorials" id="panelTutorials">
+                        <div class="thoughts__panel-header">
+                            <div class="thoughts__panel-icon">
+                                <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M2 3h6a4 4 0 014 4v14a3 3 0 00-3-3H2z"/><path d="M22 3h-6a4 4 0 00-4 4v14a3 3 0 013-3h7z"/>
+                                </svg>
+                            </div>
+                            <div class="thoughts__panel-info">
+                                <span class="thoughts__panel-title">&gt; tutoriales</span>
+                                <span class="thoughts__panel-subtitle">step-by-step guides &amp; how-tos</span>
+                            </div>
+                        </div>
+
+                        <div class="thoughts__feed">
+                            <article class="thread" data-category="tutorials">
+                                <div class="thread__index">01</div>
+                                <div class="thread__content">
+                                    <div class="thread__meta">
+                                        <span class="thread__category thread__category--tutorials">/ tutorial</span>
+                                        <span class="thread__sep">—</span>
+                                        <span class="thread__date">Sep 15, 2026</span>
+                                    </div>
+                                    <h3 class="thread__title">How to Make SQL Queries Inside an API</h3>
+                                    <p class="thread__excerpt">
+                                        A practical, step-by-step guide on connecting your API to a database
+                                        and running SQL queries safely — from setup to parameterized statements.
+                                    </p>
+                                    <a href="thought-sql-api.html" class="thread__link" data-nav>read thread
+                                        <span>&rarr;</span></a>
+                                </div>
+                            </article>
+                        </div>
+                    </div>
+
+                    <!-- PANEL: Opiniones / Ideas -->
+                    <div class="thoughts__panel" data-panel="opinions" id="panelOpinions">
+                        <div class="thoughts__panel-header">
+                            <div class="thoughts__panel-icon">
+                                <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/>
+                                </svg>
+                            </div>
+                            <div class="thoughts__panel-info">
+                                <span class="thoughts__panel-title">&gt; opiniones / ideas</span>
+                                <span class="thoughts__panel-subtitle">takes on tech, life &amp; everything in between</span>
+                            </div>
+                        </div>
+
+                        <div class="thoughts__feed">
+                            <article class="thread" data-category="opinions">
+                                <div class="thread__index">01</div>
+                                <div class="thread__content">
+                                    <div class="thread__meta">
+                                        <span class="thread__category thread__category--opinions">/ opinion</span>
+                                        <span class="thread__sep">—</span>
+                                        <span class="thread__date">Sep 28, 2026</span>
+                                    </div>
+                                    <h3 class="thread__title">Can We Merge Psychology with Software Development?</h3>
+                                    <p class="thread__excerpt">
+                                        What if understanding how people think could make us write better code?
+                                        Exploring two worlds that have more in common than you'd expect.
+                                    </p>
+                                    <a href="thought-psychology-code.html" class="thread__link" data-nav>read thread
+                                        <span>&rarr;</span></a>
+                                </div>
+                            </article>
+                        </div>
+                    </div>
+
+                    <!-- PANEL: Personal / Profesional -->
+                    <div class="thoughts__panel" data-panel="personal" id="panelPersonal">
+                        <div class="thoughts__panel-header">
+                            <div class="thoughts__panel-icon">
+                                <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"/>
+                                </svg>
+                            </div>
+                            <div class="thoughts__panel-info">
+                                <span class="thoughts__panel-title">&gt; personal / profesional</span>
+                                <span class="thoughts__panel-subtitle">where I open up about who I am</span>
+                            </div>
+                        </div>
+
+                        <div class="thoughts__feed">
+                            <article class="thread" data-category="personal">
+                                <div class="thread__index">01</div>
+                                <div class="thread__content">
+                                    <div class="thread__meta">
+                                        <span class="thread__category thread__category--personal">/ personal</span>
+                                        <span class="thread__sep">—</span>
+                                        <span class="thread__date">Sep 01, 2026</span>
+                                    </div>
+                                    <h3 class="thread__title">Full-Stack with a Broken Heart</h3>
+                                    <p class="thread__excerpt">
+                                        What happens when your personal life falls apart and you still have
+                                        a system to deliver. On code, heartbreak, and finding yourself in the process.
+                                    </p>
+                                    <a href="thought-fullstack-heartbreak.html" class="thread__link" data-nav>read thread
+                                        <span>&rarr;</span></a>
+                                </div>
+                            </article>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <div class="thoughts__counter anim" data-anim="counter-reveal">
+            <div class="about__counter-line"></div>
+            <span class="about__counter-num">02</span>
+            <span class="about__counter-label">thoughts</span>
+        </div>
+    </section>
+
+    <!-- NEXT PAGE HINT -->
+    <div class="next-page" id="nextPage">
+        <a href="projects.html" class="next-page__link" data-nav>
+            <span class="next-page__label">next: projects</span>
+            <span class="next-page__arrow">&rarr;</span>
+        </a>
+    </div>
+
+    <script src="../js/nav.js"></script>
+    <script>
+    // ===== Thoughts Tab System =====
+    (function(){
+        const tabs = document.querySelectorAll('.thoughts__tab');
+        const panels = document.querySelectorAll('.thoughts__panel');
+
+        tabs.forEach(tab => {
+            tab.addEventListener('click', () => {
+                const target = tab.getAttribute('data-tab');
+
+                // Deactivate all
+                tabs.forEach(t => t.classList.remove('is-active'));
+                panels.forEach(p => {
+                    p.classList.remove('is-active');
+                    p.classList.remove('panel-enter');
+                });
+
+                // Activate clicked
+                tab.classList.add('is-active');
+                const panel = document.querySelector(`[data-panel="${target}"]`);
+                if (panel) {
+                    panel.classList.add('is-active');
+                    // Trigger entrance animation
+                    requestAnimationFrame(() => {
+                        panel.classList.add('panel-enter');
+                    });
+                }
+            });
+        });
+
+        // Trigger initial panel animation
+        const activePanel = document.querySelector('.thoughts__panel.is-active');
+        if (activePanel) {
+            requestAnimationFrame(() => activePanel.classList.add('panel-enter'));
+        }
+    })();
+    </script>
+
+</body>
+
+</html>

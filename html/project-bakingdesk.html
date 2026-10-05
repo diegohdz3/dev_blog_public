@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BakingDesk — Diego Cortés Hernandez</title>
+    <meta name="description"
+        content="BakingDesk — My first integrated coursework project. A full-stack bakery management system built with passion and purpose.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="../css/styles.css">
+</head>
+
+<body class="subpage" data-page="project-detail">
+
+    <!-- PAGE TRANSITION -->
+    <div class="page-transition" id="pageTransition">
+        <div class="page-transition__circle"></div>
+    </div>
+
+    <!-- ============================================================
+         SUBPAGE NAVIGATION
+         ============================================================ -->
+    <nav class="sub-nav" id="subNav" aria-label="Main navigation">
+        <a href="projects.html" class="sub-nav__back" data-nav>
+            <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="#ededed" stroke-width="1.5"
+                stroke-linecap="round" stroke-linejoin="round">
+                <path d="M19 12H5M5 12L12 5M5 12L12 19" />
+            </svg>
+            <span>projects</span>
+        </a>
+        <div class="sub-nav__links">
+            <a href="../index.html" class="sub-nav__link" data-nav>home</a>
+            <a href="about.html" class="sub-nav__link" data-nav>about</a>
+            <a href="contact.html" class="sub-nav__link" data-nav>contact</a>
+        </div>
+        <div class="sub-nav__indicator">03.1 / bakingdesk</div>
+    </nav>
+
+    <!-- ============================================================
+         PROJECT HERO
+         ============================================================ -->
+    <section class="pj-hero subpage-hero" id="projectHero">
+        <div class="pj-hero__bg" data-parallax>
+            <img class="pj-hero__bg-img" src="../images/sk7.jpeg" alt="">
+            <div class="pj-hero__scanlines"></div>
+            <div class="pj-hero__scan-sweep"></div>
+            <div class="pj-hero__overlay"></div>
+        </div>
+
+        <div class="pj-hero__content">
+            <div class="pj-hero__meta">
+                <span class="pj-hero__tag anim" data-anim="typewriter">
+                    &lt; project / bakingdesk /&gt;
+                </span>
+                <span class="pj-hero__category anim" data-anim="blur-in" data-delay="1">/ full-stack</span>
+                <span class="pj-hero__date anim" data-anim="blur-in" data-delay="2">Apr 12, 2025</span>
+            </div>
+
+            <h1 class="pj-hero__title">
+                <span class="heading-line anim" data-anim="clip-up" data-delay="0">
+                    <span class="heading-line__inner">BakingDesk</span>
+                </span>
+                <span class="heading-line anim" data-anim="clip-up" data-delay="1">
+                    <span class="heading-line__inner"><em>Integrated Project I</em></span>
+                </span>
+                <svg class="about__star anim" data-anim="star-burst" viewBox="0 0 24 24" width="24" height="24">
+                    <path d="M12 2 L14.2 9.8 L22 12 L14.2 14.2 L12 22 L9.8 14.2 L2 12 L9.8 9.8 Z" fill="#ececec" />
+                </svg>
+            </h1>
+
+            <p class="pj-hero__subtitle anim" data-anim="blur-in" data-delay="3">
+                My first integrated coursework project. I developed most of the backend
+                and proposed the design. It challenged me both academically and personally,
+                and it remains a project I care deeply about.
+            </p>
+
+            <div class="pj-hero__actions anim" data-anim="blur-in" data-delay="4">
+                <a href="#" class="pj-hero__visit-btn" target="_blank" rel="noopener noreferrer" id="visitProject">
+                    <span class="pj-hero__visit-border">
+                        <svg viewBox="0 0 300 64" preserveAspectRatio="none">
+                            <rect x="1" y="1" width="298" height="62" rx="4" ry="4" />
+                        </svg>
+                    </span>
+                    <span class="pj-hero__visit-pulse"></span>
+                    <span class="pj-hero__visit-label">
+                        <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor"
+                            stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" />
+                            <polyline points="15 3 21 3 21 9" />
+                            <line x1="10" y1="14" x2="21" y2="3" />
+                        </svg>
+                        visit project
+                    </span>
+                    <span class="pj-hero__visit-arrow">&rarr;</span>
+                </a>
+                <a href="#overview" class="pj-hero__scroll-hint">
+                    <span>scroll to explore</span>
+                    <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.5"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M12 5v14M5 12l7 7 7-7" />
+                    </svg>
+                </a>
+            </div>
+        </div>
+
+        <div class="pj-hero__counter anim" data-anim="counter-reveal">
+            <div class="about__counter-line"></div>
+            <span class="about__counter-num">03.1</span>
+            <span class="about__counter-label">bakingdesk</span>
+        </div>
+    </section>
+
+    <!-- ============================================================
+         PROJECT OVERVIEW
+         ============================================================ -->
+    <section class="pj-section" id="overview">
+        <div class="pj-section__grid">
+            <div class="pj-section__left">
+                <span class="pj-section__eyebrow anim" data-anim="blur-in">/ overview</span>
+                <h2 class="pj-section__heading anim" data-anim="blur-in" data-delay="1">
+                    What is <em>BakingDesk?</em>
+                </h2>
+            </div>
+            <div class="pj-section__right">
+                <p class="pj-section__text anim" data-anim="blur-in" data-delay="2">
+                    BakingDesk is a full-stack bakery management system designed to streamline
+                    daily operations for small bakeries. From inventory tracking to order management,
+                    the application covers the core needs of a bakery business in a clean,
+                    intuitive interface.
+                </p>
+                <p class="pj-section__text anim" data-anim="blur-in" data-delay="3">
+                    This was my first integrated project for my university coursework — a project
+                    where I had to combine everything I'd learned about backend development, database
+                    design, and frontend implementation into a single, cohesive product. I took the lead
+                    on backend architecture and proposed the visual design direction for the team.
+                </p>
+                <div class="pj-section__details anim" data-anim="blur-in" data-delay="4">
+                    <div class="pj-section__detail">
+                        <span class="pj-section__detail-key">&gt; role_</span>
+                        <span class="pj-section__detail-val">Backend Lead & Design</span>
+                    </div>
+                    <div class="pj-section__detail">
+                        <span class="pj-section__detail-key">&gt; type_</span>
+                        <span class="pj-section__detail-val">University Coursework</span>
+                    </div>
+                    <div class="pj-section__detail">
+                        <span class="pj-section__detail-key">&gt; team_</span>
+                        <span class="pj-section__detail-val">Collaborative</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================================
+         DEVELOPMENT TIMELINE
+         ============================================================ -->
+    <section class="pj-section pj-section--dark" id="timeline">
+        <div class="pj-section__grid pj-section__grid--full">
+            <div class="pj-section__left">
+                <span class="pj-section__eyebrow anim" data-anim="blur-in">/ timeline</span>
+                <h2 class="pj-section__heading anim" data-anim="blur-in" data-delay="1">
+                    The development <em>process.</em>
+                </h2>
+            </div>
+        </div>
+
+        <div class="pj-timeline">
+            <div class="pj-timeline__line"></div>
+
+            <div class="pj-timeline__item anim" data-anim="blur-in" data-delay="1">
+                <div class="pj-timeline__marker">
+                    <span class="pj-timeline__dot"></span>
+                </div>
+                <div class="pj-timeline__card">
+                    <span class="pj-timeline__phase">Phase 01</span>
+                    <h3 class="pj-timeline__title">Planning & Research</h3>
+                    <p class="pj-timeline__desc">
+                        Defined the project scope, researched bakery workflows,
+                        designed the database schema, and created initial wireframes
+                        for the user interface.
+                    </p>
+                </div>
+            </div>
+
+            <div class="pj-timeline__item anim" data-anim="blur-in" data-delay="2">
+                <div class="pj-timeline__marker">
+                    <span class="pj-timeline__dot"></span>
+                </div>
+                <div class="pj-timeline__card">
+                    <span class="pj-timeline__phase">Phase 02</span>
+                    <h3 class="pj-timeline__title">Backend Architecture</h3>
+                    <p class="pj-timeline__desc">
+                        Built the server-side logic, API endpoints, database connections,
+                        and authentication system. This was the core of my contribution
+                        to the team.
+                    </p>
+                </div>
+            </div>
+
+            <div class="pj-timeline__item anim" data-anim="blur-in" data-delay="3">
+                <div class="pj-timeline__marker">
+                    <span class="pj-timeline__dot"></span>
+                </div>
+                <div class="pj-timeline__card">
+                    <span class="pj-timeline__phase">Phase 03</span>
+                    <h3 class="pj-timeline__title">Frontend & Design</h3>
+                    <p class="pj-timeline__desc">
+                        Proposed and implemented the visual design direction.
+                        Connected the frontend with backend APIs and ensured
+                        a smooth user experience across the application.
+                    </p>
+                </div>
+            </div>
+
+            <div class="pj-timeline__item anim" data-anim="blur-in" data-delay="4">
+                <div class="pj-timeline__marker">
+                    <span class="pj-timeline__dot"></span>
+                </div>
+                <div class="pj-timeline__card">
+                    <span class="pj-timeline__phase">Phase 04</span>
+                    <h3 class="pj-timeline__title">Testing & Delivery</h3>
+                    <p class="pj-timeline__desc">
+                        Final testing, bug fixes, documentation, and project
+                        presentation. Successfully delivered as a complete,
+                        functional system.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================================
+         CHALLENGES
+         ============================================================ -->
+    <section class="pj-section" id="challenges">
+        <div class="pj-section__grid">
+            <div class="pj-section__left">
+                <span class="pj-section__eyebrow anim" data-anim="blur-in">/ challenges</span>
+                <h2 class="pj-section__heading anim" data-anim="blur-in" data-delay="1">
+                    What I <em>learned.</em>
+                </h2>
+            </div>
+            <div class="pj-section__right">
+                <div class="pj-challenges">
+                    <div class="pj-challenge anim" data-anim="blur-in" data-delay="2">
+                        <div class="pj-challenge__icon">
+                            <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor"
+                                stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M12 2L2 7l10 5 10-5-10-5z" />
+                                <path d="M2 17l10 5 10-5" />
+                                <path d="M2 12l10 5 10-5" />
+                            </svg>
+                        </div>
+                        <div class="pj-challenge__body">
+                            <h3 class="pj-challenge__title">Backend Architecture</h3>
+                            <p class="pj-challenge__text">
+                                Learning to structure a real backend from scratch — handling routes,
+                                controllers, and database queries in a way that actually scales
+                                was one of the biggest hurdles I faced.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="pj-challenge anim" data-anim="blur-in" data-delay="3">
+                        <div class="pj-challenge__icon">
+                            <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor"
+                                stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" />
+                                <circle cx="9" cy="7" r="4" />
+                                <path d="M23 21v-2a4 4 0 0 0-3-3.87" />
+                                <path d="M16 3.13a4 4 0 0 1 0 7.75" />
+                            </svg>
+                        </div>
+                        <div class="pj-challenge__body">
+                            <h3 class="pj-challenge__title">Team Collaboration</h3>
+                            <p class="pj-challenge__text">
+                                Working in a team taught me how to communicate technical decisions,
+                                manage code conflicts, and align everyone toward a shared vision —
+                                skills that go beyond just writing code.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="pj-challenge anim" data-anim="blur-in" data-delay="4">
+                        <div class="pj-challenge__icon">
+                            <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor"
+                                stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round">
+                                <rect x="2" y="3" width="20" height="14" rx="2" ry="2" />
+                                <line x1="8" y1="21" x2="16" y2="21" />
+                                <line x1="12" y1="17" x2="12" y2="21" />
+                            </svg>
+                        </div>
+                        <div class="pj-challenge__body">
+                            <h3 class="pj-challenge__title">Design Decisions</h3>
+                            <p class="pj-challenge__text">
+                                Proposing the design for the whole team was nerve-wracking.
+                                I had to balance aesthetics with usability and make sure
+                                the interface was intuitive for real bakery workflows.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================================
+         GALLERY
+         ============================================================ -->
+    <section class="pj-section pj-section--dark" id="gallery">
+        <div class="pj-section__grid pj-section__grid--full">
+            <div class="pj-section__left">
+                <span class="pj-section__eyebrow anim" data-anim="blur-in">/ gallery</span>
+                <h2 class="pj-section__heading anim" data-anim="blur-in" data-delay="1">
+                    Screenshots & <em>visuals.</em>
+                </h2>
+            </div>
+        </div>
+
+        <div class="pj-gallery">
+            <div class="pj-gallery__item anim" data-anim="card-reveal" data-delay="0">
+                <div class="pj-gallery__image-wrap">
+                    <img class="pj-gallery__image" src="../images/sk7.jpeg"
+                        alt="BakingDesk dashboard view">
+                    <div class="pj-gallery__image-scanlines"></div>
+                </div>
+                <span class="pj-gallery__caption">Dashboard overview</span>
+            </div>
+            <div class="pj-gallery__item anim" data-anim="card-reveal" data-delay="1">
+                <div class="pj-gallery__image-wrap">
+                    <img class="pj-gallery__image" src="../images/sk7.jpeg"
+                        alt="BakingDesk order management">
+                    <div class="pj-gallery__image-scanlines"></div>
+                </div>
+                <span class="pj-gallery__caption">Order management</span>
+            </div>
+            <div class="pj-gallery__item anim" data-anim="card-reveal" data-delay="2">
+                <div class="pj-gallery__image-wrap">
+                    <img class="pj-gallery__image" src="../images/sk7.jpeg"
+                        alt="BakingDesk inventory system">
+                    <div class="pj-gallery__image-scanlines"></div>
+                </div>
+                <span class="pj-gallery__caption">Inventory system</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================================
+         FINAL CTA
+         ============================================================ -->
+    <section class="pj-cta" id="projectCta">
+        <div class="pj-cta__content anim" data-anim="blur-in">
+            <span class="pj-cta__eyebrow">/ interested?</span>
+            <h2 class="pj-cta__heading">
+                Check out <em>BakingDesk</em> in action.
+            </h2>
+            <a href="#" class="pj-cta__btn" target="_blank" rel="noopener noreferrer" id="ctaVisitProject">
+                <span class="pj-cta__btn-bg"></span>
+                <span class="pj-cta__btn-border">
+                    <svg viewBox="0 0 320 72" preserveAspectRatio="none">
+                        <rect x="1" y="1" width="318" height="70" rx="6" ry="6" />
+                    </svg>
+                </span>
+                <span class="pj-cta__btn-content">
+                    <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor"
+                        stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" />
+                        <polyline points="15 3 21 3 21 9" />
+                        <line x1="10" y1="14" x2="21" y2="3" />
+                    </svg>
+                    <span>[ visit the project ]</span>
+                    <span class="pj-cta__btn-arrow">&rarr;</span>
+                </span>
+            </a>
+        </div>
+    </section>
+
+    <!-- NEXT PAGE HINT -->
+    <div class="next-page" id="nextPage">
+        <a href="projects.html" class="next-page__link" data-nav>
+            <span class="next-page__arrow" aria-hidden="true">&larr;</span>
+            <span class="next-page__label">back to projects</span>
+        </a>
+    </div>
+
+    <script src="../js/nav.js"></script>
+    <script src="../js/project-detail.js"></script>
+
+</body>
+
+</html>
